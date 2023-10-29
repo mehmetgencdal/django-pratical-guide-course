@@ -1,0 +1,6 @@
+{
+    "python.analysis.autoImportCompletions": true,
+    "python.analysis.typeCheckingMode": "basic",
+    "python.languageServer": "Pylance",
+    "emmet.includeLanguages": {"django-html":"html"}
+}

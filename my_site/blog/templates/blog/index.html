@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block title %}My Blog{% endblock %}
+
+{% block css_files %}
+    <link rel="stylesheet" href="{% static 'blog/post.css' %}">
+    <link rel="stylesheet" href="{% static 'blog/index.css' %}">
+{% endblock %}
+
+{% block content %}
+
+    <section id="welcome">
+        <header>
+            <img src="{% static 'blog/images/pp.jpg' %}" alt="Mehmet - The Author of This Blog">
+            <h2>MEHMET'S BLOG</h2>
+        </header>
+        <p>Hi, I'm Mehmet and I love to blog about science.</p>
+    </section>
+
+    <section id="latest-posts">
+        <h2>My Lastest Thoughts</h2>
+        <ul>
+            {% for post in posts %}
+                {% include './includes/post.html' %}
+            {% endfor %}
+        </ul>
+    </section>
+
+    <section id="about">
+        <h2>What I do?</h2>
+        <p>
+            I'm a computer engineer.
+            I work on a project about autism.
+        </p>
+        <p>
+            I love coding.
+            AI is my favourite topic.
+        </p>
+    </section>
+{% endblock %}
